@@ -1,0 +1,348 @@
+@import "tailwindcss";
+
+:root {
+  --color-bg: #080808;
+  --color-bg-secondary: #111111;
+  --color-navy: #0B1220;
+  --color-gold: #C9A227;
+  --color-gold-light: #E1C76A;
+  --color-ivory: #F6F1E7;
+  --color-white: #FFFFFF;
+  --color-muted: #A8A8A8;
+  --font-serif: 'Cormorant Garamond', 'Playfair Display', serif;
+  --font-sans: 'Inter', 'Manrope', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-ivory);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #080808; }
+::-webkit-scrollbar-thumb { background: #C9A227; border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: #E1C76A; }
+
+/* Selection */
+::selection { background: rgba(201, 162, 39, 0.25); color: #F6F1E7; }
+
+/* Grain overlay */
+.grain-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+}
+
+/* Gold gradient text */
+.gold-text {
+  background: linear-gradient(135deg, #C9A227 0%, #E1C76A 50%, #C9A227 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Serif headings */
+.heading-serif {
+  font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+}
+
+/* Sans body */
+.body-sans {
+  font-family: 'Inter', 'Manrope', sans-serif;
+}
+
+/* Gold line */
+.gold-line {
+  background: linear-gradient(90deg, transparent, #C9A227, transparent);
+  height: 1px;
+}
+
+/* Glass card */
+.glass-card {
+  background: rgba(17, 17, 17, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(201, 162, 39, 0.15);
+}
+
+/* Premium button */
+.btn-gold {
+  background: linear-gradient(135deg, #C9A227 0%, #E1C76A 50%, #C9A227 100%);
+  background-size: 200% 200%;
+  color: #080808;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-gold:hover {
+  background-position: right center;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(201, 162, 39, 0.4);
+}
+
+.btn-ghost {
+  border: 1px solid rgba(201, 162, 39, 0.5);
+  color: #C9A227;
+  background: transparent;
+  transition: all 0.4s ease;
+}
+
+.btn-ghost:hover {
+  background: rgba(201, 162, 39, 0.1);
+  border-color: #C9A227;
+  transform: translateY(-2px);
+}
+
+/* Section padding */
+.section-pad {
+  padding: 100px 0;
+}
+
+/* Ambient glow */
+.ambient-gold {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201, 162, 39, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Card hover */
+.practice-card {
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  cursor: pointer;
+}
+
+.practice-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(201, 162, 39, 0.6);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 40px rgba(201, 162, 39, 0.08);
+}
+
+/* Text reveal */
+@keyframes revealUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes revealFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes drawLine {
+  from { scaleX: 0; }
+  to { scaleX: 1; }
+}
+
+@keyframes goldPulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(201, 162, 39, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(201, 162, 39, 0.6); }
+}
+
+@keyframes floatPulse {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, transparent 0%, rgba(201, 162, 39, 0.3) 50%, transparent 100%);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+}
+
+/* Cursor */
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background: #C9A227;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 99999;
+  transition: transform 0.1s ease;
+}
+
+.cursor-ring {
+  width: 32px;
+  height: 32px;
+  border: 1px solid rgba(201, 162, 39, 0.6);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 99998;
+  transition: all 0.15s ease;
+}
+
+/* Map */
+.tn-map-district {
+  fill: #1a2035;
+  stroke: rgba(201, 162, 39, 0.3);
+  stroke-width: 0.5;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.tn-map-district:hover {
+  fill: rgba(201, 162, 39, 0.2);
+  stroke: #C9A227;
+}
+
+/* Saul section */
+.saul-section {
+  background: linear-gradient(135deg, #0a0f08 0%, #1a1f10 30%, #0f1508 60%, #080808 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.saul-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('/images/saul-bg.jpg') center/cover no-repeat;
+  opacity: 0.08;
+  filter: sepia(80%) hue-rotate(30deg) saturate(0.5);
+}
+
+.saul-venetian {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 18px,
+    rgba(0,0,0,0.6) 18px,
+    rgba(0,0,0,0.6) 20px
+  );
+  pointer-events: none;
+}
+
+/* Floating buttons */
+.floating-btn {
+  position: fixed;
+  right: 24px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  animation: floatPulse 3s ease-in-out infinite;
+}
+
+/* Navigation gold underline */
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #C9A227;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Timeline */
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  background: linear-gradient(180deg, #C9A227 0%, rgba(201, 162, 39, 0.1) 100%);
+  transition: height 0.5s ease;
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Mobile specific */
+@media (max-width: 768px) {
+  .section-pad { padding: 70px 0; }
+}
+
+/* Hidden on mobile util */
+@media (max-width: 768px) {
+  .hidden-mobile { display: none !important; }
+}
+
+/* Practice card explore link hover */
+.practice-card:hover .explore-link {
+  opacity: 1 !important;
+}
+
+/* Gold shimmer animation on CTA */
+@keyframes goldGlow {
+  0%, 100% { box-shadow: 0 0 20px rgba(201,162,39,0.2); }
+  50% { box-shadow: 0 0 40px rgba(201,162,39,0.5); }
+}
+
+/* Select options style */
+select option {
+  background: #111111;
+  color: #F6F1E7;
+}
+
+
+
+/* Saul section venetian blinds animation */
+@keyframes blindsShift {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 0.8; }
+}
+
+/* Number reveal */
+@keyframes numberReveal {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Timeline dot pulse */
+@keyframes dotPulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.5); opacity: 0.6; }
+}
+
