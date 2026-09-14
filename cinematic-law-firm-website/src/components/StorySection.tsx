@@ -262,6 +262,20 @@ export default function StorySection() {
                   </div>
                 </div>
 
+                <div style={{
+                  padding: '12px 16px',
+                  background: 'rgba(201,162,39,0.06)',
+                  border: '1px solid rgba(201,162,39,0.25)',
+                  borderRadius: '2px',
+                }}>
+                  <div style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: '18px', fontWeight: 600, color: '#F6F1E7' }}>
+                    B. Samson Paul
+                  </div>
+                  <div style={{ fontFamily: 'Inter, sans-serif', fontSize: '10px', color: '#C9A227', marginTop: '2px' }}>
+                    Partner • Advocate
+                  </div>
+                </div>
+
                 {/* Keerthana S & Santhosh Kumar A. positioned side by side */}
                 <div style={{
                   padding: '12px 16px',

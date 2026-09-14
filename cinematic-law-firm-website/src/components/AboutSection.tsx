@@ -116,7 +116,7 @@ export default function AboutSection() {
                 fontSize: '11px',
                 color: 'rgba(168,168,168,0.7)',
                 marginTop: '4px',
-              }}>Advocate, High Court of Madras</div>
+              }}>BL Associate, High Court of Madras</div>
             </div>
           </motion.div>
 
@@ -150,7 +150,7 @@ export default function AboutSection() {
                   color: '#C9A227',
                 }}
               >
-                Advocate, High Court of Madras
+                BL Associate, High Court of Madras
               </motion.div>
             </div>
 
@@ -167,7 +167,7 @@ export default function AboutSection() {
                 fontWeight: 300,
               }}
             >
-              Being a first-generation lawyer, S. Nataraj's practice has been shaped by determination,
+              S. Nataraj's practice has been shaped by determination,
               continuous learning and practical experience before the Courts. His approach combines rigorous
               legal analysis with practical strategy, ensuring that every client receives focused and
               professional representation.

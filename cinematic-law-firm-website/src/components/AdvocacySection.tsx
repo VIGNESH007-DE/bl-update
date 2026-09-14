@@ -65,7 +65,7 @@ export default function AdvocacySection() {
                 borderBottom: '1px solid rgba(201,162,39,0.2)',
                 paddingBottom: '16px',
               }}>
-                LEGAL NOTICE
+                LEGAL
               </div>
 
               {/* Simulated document lines */}
@@ -107,7 +107,7 @@ export default function AdvocacySection() {
                   letterSpacing: '0.1em',
                 }}>
                   S. NATARAJ<br />
-                  <span style={{ fontSize: '10px', color: 'rgba(168,168,168,0.4)' }}>ADVOCATE, HIGH COURT OF MADRAS</span>
+                  <span style={{ fontSize: '10px', color: 'rgba(168,168,168,0.4)' }}>BL ASSOCIATE, HIGH COURT OF MADRAS</span>
                 </div>
               </div>
             </div>

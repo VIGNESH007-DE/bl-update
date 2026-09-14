@@ -127,8 +127,8 @@ export const TEAM_MEMBERS = [
     image: '', // Add portrait photo path here later, e.g. '/images/team/nataraj.jpg'
     qualifications: 'B.A. LL.B. Hons.',
     role: 'Partner',
-    court: 'Advocate, High Court of Madras',
-    bio: "Being a first-generation lawyer, S. Nataraj's practice has been shaped by determination, continuous learning and practical experience before the Courts. His approach combines rigorous legal analysis with practical strategy, ensuring that every client receives focused and professional representation.",
+    court: 'BL Associate, High Court of Madras',
+    bio: "S. Nataraj's practice has been shaped by determination, continuous learning and practical experience before the Courts. His approach combines rigorous legal analysis with practical strategy, ensuring that every client receives focused and professional representation.",
     specializations: ['High Court Litigation', 'Writ Petitions', 'Civil Law', 'Criminal Law', 'IPR', 'Commercial Matters'],
   },
   {

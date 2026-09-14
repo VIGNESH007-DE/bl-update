@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import CrestEmblem from './CrestEmblem';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 
@@ -79,14 +80,7 @@ export default function Navbar({ visible }: NavbarProps) {
             style={{ background: 'none', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '12px' }}
             aria-label="BL Associate Home"
           >
-            <svg viewBox="0 0 44 44" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="22" cy="22" r="20" stroke="rgba(201,162,39,0.4)" strokeWidth="0.5" />
-              <line x1="14" y1="16" x2="30" y2="16" stroke="#C9A227" strokeWidth="1.2" strokeLinecap="round" />
-              <line x1="22" y1="11" x2="22" y2="33" stroke="#C9A227" strokeWidth="1.2" strokeLinecap="round" />
-              <path d="M14 16 L10.5 24 Q10.5 27.5 14 27.5 Q17.5 27.5 17.5 24 Z" stroke="#C9A227" strokeWidth="0.8" fill="none" />
-              <path d="M30 16 L26.5 22 Q26.5 25.5 30 25.5 Q33.5 25.5 33.5 22 Z" stroke="#C9A227" strokeWidth="0.8" fill="none" />
-              <line x1="18" y1="33" x2="26" y2="33" stroke="#C9A227" strokeWidth="1.2" strokeLinecap="round" />
-            </svg>
+            <CrestEmblem size={44} animated={false} showCurvedText={false} />
             <div>
               <div style={{
                 fontFamily: 'Cormorant Garamond, serif',

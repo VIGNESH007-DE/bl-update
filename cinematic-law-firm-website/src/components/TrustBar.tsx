@@ -5,7 +5,6 @@ const TRUST_ITEMS = [
   { value: '17+', label: 'Areas of Law' },
   { value: '5', label: 'Legal Professionals' },
   { value: '34', label: 'Reported Matters' },
-  { value: '1', label: 'First-Generation Practice' },
 ];
 
 export default function TrustBar() {
